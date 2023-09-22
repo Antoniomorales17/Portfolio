@@ -7,16 +7,17 @@ import Contact from "./Contact/Contact";
 import Footer from "./Footer/Footer" ;
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-//include images into your bundle
+import TuExperiencia from "./TuExperiencia/TuExperiencia";
 
 
-//create your first component
+
 function App () {
 	return (
 		<div>
 			<Navbar/>
 			<Intro/>
 			<Skills/>
+			<TuExperiencia />
 			<Works/>
 			<Contact/>
 			<Footer />

@@ -1,0 +1,84 @@
+#tu-experiencia {
+    padding: 40px;
+    text-align: center;
+    background-color: rgb(30, 30, 30);
+  }
+  
+  .section-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #faf6f6;
+  }
+  
+  .experiencia-laboral,
+  .historial-estudios {
+    display: flex;
+    flex-wrap: wrap; /* Agregamos flex-wrap para permitir que los elementos se envuelvan en dispositivos móviles */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+  }
+  
+  .experiencia-item,
+  .estudio-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 10px; /* Agregamos margen horizontal para separar los elementos */
+    max-width: 400px;
+    width: calc(50% - 20px); /* Dividimos en dos columnas, restando el margen */
+    position: relative;
+  }
+  
+  .experiencia-item::before,
+  .estudio-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: transparent !important;
+  }
+  
+  .experiencia-item::before {
+    left: -2px;
+  }
+  
+  .experiencia-item h4,
+  .estudio-item h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .experiencia-item p,
+  .estudio-item p {
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  
+  
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 768px) {
+    .experiencia-laboral,
+    .historial-estudios {
+      flex-direction: column; /* Cambiamos a dirección vertical en dispositivos móviles */
+      align-items: center;
+    }
+    
+    .experiencia-item,
+    .estudio-item {
+      width: 100%; /* Ocupar todo el ancho en dispositivos móviles */
+      margin: 20px 0; /* Mayor espacio entre elementos en dispositivos móviles */
+    }
+  }
+  
+  .section-subtitle {
+    font-size: 1.8rem; /* Tamaño de fuente deseado */
+    margin-top: 30px; /* Ajusta el margen superior según sea necesario */
+    margin-right: 10px;
+    color: #f5f3f3; /* Color de texto deseado */
+  }
+  
