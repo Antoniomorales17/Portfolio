@@ -44,6 +44,7 @@ const estudios = [
   },
 ];
 
+
 const TuExperiencia = () => {
   return (
     <section id="tu-experiencia">
