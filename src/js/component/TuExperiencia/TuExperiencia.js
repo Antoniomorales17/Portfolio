@@ -40,7 +40,7 @@ const estudios = [
     institucion: 'Universidad de Almería (UAL)',
     periodo: '2015',
     descripcion:
-      'Grado en Marketing, desarrollo e investigacion de los mercados',
+      'Grado en Marketing, desarrollo y estudio de los elementos del mercado',
   },
 ];
 
