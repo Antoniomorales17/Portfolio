@@ -3,6 +3,7 @@ import './Works.css';
 import tikets from '../../../img/wizzz.png';
 import retro2 from '../../../img/retro2.png';
 import gifs from '../../../img/gifs.png';
+import shop1 from '../../../img/shop1.png';
 const proyectosData = [
   {
     title: 'Wizz Mail',
@@ -11,6 +12,14 @@ const proyectosData = [
     img: tikets,
     link_github: 'https://github.com/Antoniomorales17/WizzMail',
     link_demo: 'https://fronted-ticketing-app.vercel.app/',
+  },
+  {
+    title: 'NonoStore',
+    long_description:
+      "¡Bienvenido a nuestra Tienda de Ropa en línea! E-commerce donde encontrarás una selección de moda para todas las edades y géneros",
+    img: shop1,
+    link_github: 'https://github.com/Antoniomorales17/NonoStore',
+    link_demo: 'https://nonostore.vercel.app/',
   },
   {
     title: 'Quiz VideoGames',
@@ -28,6 +37,7 @@ const proyectosData = [
     link_github: 'https://github.com/Antoniomorales17/Gif-Photo-Search-App',
     link_demo: 'https://gifphotosearch.vercel.app/',
   },
+  
   // Agrega más proyectos aquí
 ];
 
