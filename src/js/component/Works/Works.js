@@ -4,7 +4,7 @@ import tikets from '../../../img/wizzz.png';
 import retro2 from '../../../img/retro2.png';
 import gifs from '../../../img/gifs.png';
 import shop1 from '../../../img/shop1.png';
-import blog from '../../../img/blog.png';
+import blog from '../../../img/blogw.png';
 const proyectosData = [
   {
     title: 'Wizz Mail',
@@ -39,12 +39,11 @@ const proyectosData = [
     link_demo: 'https://gifphotosearch.vercel.app/',
   },
   {
-    title: 'Blog JR',
+    title: 'lavidadeunjunior',
     long_description:
       '¡Bienvenido a mi blog personal de programador junior! En este espacio, compartiré mis experiencias, conocimientos y aprendizajes mientras navego por el emocionante mundo de la programación.',
     img: blog,
-    link_github: 'https://github.com/Antoniomorales17/BlogJR',
-    link_demo: 'https://lavidadeunjuniorr.vercel.app/',
+    link_demo: 'https://antoniomoragimenez.wordpress.com/',
   },
   
   // Agrega más proyectos aquí
