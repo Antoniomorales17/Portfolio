@@ -5,6 +5,8 @@ import retro2 from '../../../img/retro2.png';
 import gifs from '../../../img/gifs.png';
 import shop1 from '../../../img/shop1.png';
 import blog from '../../../img/blogw.png';
+
+import find from '../../../img/find.png';
 const proyectosData = [
   {
     title: 'Wizz Mail',
@@ -13,6 +15,14 @@ const proyectosData = [
     img: tikets,
     link_github: 'https://github.com/Antoniomorales17/WizzMail',
     link_demo: 'https://fronted-ticketing-app.vercel.app/',
+  },
+  {
+    title: 'finDeveloper',
+    long_description:
+      'Plataforma web diseñada para facilitar la búsqueda y el contacto directo con desarrolladores de todo el mundo',
+    img: find,
+    link_github: 'https://github.com/Antoniomorales17/finDeveloper',
+    link_demo: 'https://findeveloper.vercel.app/',
   },
   {
     title: 'NonoStore',
