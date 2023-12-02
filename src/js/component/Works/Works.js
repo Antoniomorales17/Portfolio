@@ -5,6 +5,7 @@ import retro2 from '../../../img/retro2.png';
 import gifs from '../../../img/gifs.png';
 import shop1 from '../../../img/shop1.png';
 import blog from '../../../img/blogw.png';
+import filo from '../../../img/filo.png'
 
 import find from '../../../img/find.png';
 const proyectosData = [
@@ -15,6 +16,14 @@ const proyectosData = [
     img: tikets,
     link_github: 'https://github.com/Antoniomorales17/WizzMail',
     link_demo: 'https://fronted-ticketing-app.vercel.app/',
+  },
+  {
+    title: 'Philosophy-App',
+    long_description:
+      'Bienvenido a la Aplicación de Filosofía, una aplicación de vanguardia diseñada para explorar el fascinante mundo de la filosofía',
+    img: filo,
+    link_github: 'https://github.com/Antoniomorales17/Philosophy-App',
+    link_demo: 'https://juanmogimenez.vercel.app/',
   },
   {
     title: 'finDeveloper',
