@@ -6,6 +6,7 @@ import gifs from '../../../img/gifs.png';
 import shop1 from '../../../img/shop1.png';
 import blog from '../../../img/blogw.png';
 import filo from '../../../img/filo.png'
+import bud from '../../../img/bud.png'
 
 import find from '../../../img/find.png';
 const proyectosData = [
@@ -63,6 +64,14 @@ const proyectosData = [
       '¡Bienvenido a mi blog personal de programador junior! En este espacio, compartiré mis experiencias, conocimientos y aprendizajes mientras navego por el emocionante mundo de la programación.',
     img: blog,
     link_demo: 'https://antoniomoragimenez.wordpress.com/',
+  },
+  {
+    title: 'Aplicación de Asignación de Presupuesto',
+    long_description:
+      'Aplicación web que ayuda a los usuarios a gestionar sus finanzas al permitirles establecer y hacer un seguimiento de su presupuesto.',
+    img: bud,
+    link_github: 'https://github.com/Antoniomorales17/Budget-allocation-app',
+    link_demo: 'https://budget-allocation-app.vercel.app/',
   },
   
   // Agrega más proyectos aquí
