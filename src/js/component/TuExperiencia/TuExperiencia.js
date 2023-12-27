@@ -31,7 +31,7 @@ const estudios = [
   {
     titulo: 'Máster en E-commerce',
     institucion: 'Universidad de la Rioja (UNIR)',
-    periodo: '2015',
+    periodo: '2019',
     descripcion:
       'Master en Comercio electrónico y analisis de entornos digitales.',
   },
