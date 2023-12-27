@@ -5,6 +5,7 @@
 ## Acerca de mí 😁
 
 ¡Hola! Soy Antonio Morales, un apasionado desarrollador de software y la tecnologia. 
+Puedes ver mi video resumen [aquí](https://bit.ly/48bPFaH) 👀
 
 ## Proyectos Destacados 🥇
 
