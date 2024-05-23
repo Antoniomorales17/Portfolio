@@ -7,6 +7,9 @@ import shop1 from '../../../img/shop1.png';
 import blog from '../../../img/blogw.png';
 import filo from '../../../img/filo.png'
 import bud from '../../../img/bud.png'
+import figma1 from '../../../img/figma1.png'
+import figma2 from '../../../img/figma2.png'
+import figma3 from '../../../img/figma3.png';
 
 import find from '../../../img/find.png';
 const proyectosData = [
@@ -73,8 +76,27 @@ const proyectosData = [
     link_github: 'https://github.com/Antoniomorales17/Budget-allocation-app',
     link_demo: 'https://budget-allocation-app.vercel.app/',
   },
-  
-  // Agrega más proyectos aquí
+
+
+];
+
+// Datos de los proyectos de UX
+const proyectosUXData = [
+  {
+    title: 'Gourmet Express',
+    long_description: 'Prototipo de una aplicación de comida de lujo a domicilio. Figma para el modelaje y la arquitectura para crear la experiencia de usuario (UX)',
+    img: figma2,
+    link_figma: 'https://www.figma.com/design/JLlovkZQgY1iDY0dVrXIu8/Prototipo-de-alta-fidelidad-Gourmet-Express-%F0%9F%8D%A3?node-id=0%3A1&t=BMNtZiGh20yApBiA-1',
+
+  },
+  {
+    title: 'WebMentor',
+    long_description: 'Prototipo de una aplicación de formación y ayuda a personas de mayor edad en ámbitos digitales. Figma para el modelaje y la arquitectura para crear la experiencia de usuario',
+    img: figma1,
+    link_figma: 'https://www.figma.com/design/4BylQgWeCxRfaj84zN1uD1/WebMentor-hi-fi?node-id=1%3A69&t=9WdiOmM2maussUCa-1',
+
+  },
+  // Agrega más proyectos de UX aquí
 ];
 
 const Works = () => {
@@ -90,7 +112,7 @@ const Works = () => {
                 <img src={proyecto.img} alt={proyecto.title} className="projectImg" />
               </div>
               <p className="project-description">{proyecto.long_description}</p>
-              
+
               <div className="projectLinks">
                 <a href={proyecto.link_github} target="_blank" rel="noopener noreferrer" className="github-link">
                   GitHub
@@ -103,6 +125,27 @@ const Works = () => {
           </div>
         ))}
       </div>
+
+      <h2 className="worksTittle">Proyectos de UX</h2>
+      <div className="worksContainer">
+        {proyectosUXData.map((proyecto, index) => (
+          <div className="project" key={index}>
+            <div className="projectCard">
+              <h3>{proyecto.title}</h3>
+              <div className="imgContainer">
+                <img src={proyecto.img} alt={proyecto.title} className="projectImg" />
+              </div>
+              <p className="project-description">{proyecto.long_description}</p>
+              <div className="projectLinks">
+                <a href={proyecto.link_figma} target="_blank" rel="noopener noreferrer" className="figma-link">
+                  Figma
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
     </section>
   );
 };

@@ -88,4 +88,17 @@
   .project h3 {
     font-size: 1.2rem; /* Reducir el tamaño de fuente en pantallas pequeñas */
   }
+
+  .figma-link {
+    display: inline-block;
+    margin: 0 10px; /* Ajusta el margen según sea necesario */
+  }
+  
+  .figmaIcon {
+    width: 24px; /* Ajusta el tamaño según sea necesario */
+    height: 24px;
+    vertical-align: middle; /* Alinea el ícono verticalmente en el medio */
+  }
+  
+  
 }

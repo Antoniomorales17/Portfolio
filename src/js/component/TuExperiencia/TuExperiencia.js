@@ -22,6 +22,13 @@ const experienciaLaboral = [
 
 const estudios = [
   {
+    titulo: 'Java / Spring Boot',
+    institucion: 'Hack A Boss',
+    periodo: '2024',
+    descripcion:
+      'Título de Programador backend especializado en Java y SpringBoot',
+  },
+  {
     titulo: 'Full Stack Developer',
     institucion: '4Geeks Academy',
     periodo: '2023',
@@ -51,7 +58,7 @@ const TuExperiencia = () => {
       <h2 className="section-title">Experiencia</h2>
 
       <div className="experiencia-laboral">
-      <h3 className="section-subtitle">Experiencia Laboral</h3>
+        <h3 className="section-subtitle">Experiencia Laboral</h3>
         {experienciaLaboral.map((item, index) => (
           <div className="experiencia-item" key={index}>
             <h4>{item.puesto}</h4>
@@ -63,7 +70,7 @@ const TuExperiencia = () => {
       </div>
 
       <div className="historial-estudios">
-      <h3 className="section-subtitle">Historial de Estudios</h3>
+        <h3 className="section-subtitle">Historial de Estudios</h3>
         {estudios.map((item, index) => (
           <div className="estudio-item" key={index}>
             <h4>{item.titulo}</h4>
