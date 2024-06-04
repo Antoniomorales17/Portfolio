@@ -34,7 +34,7 @@ const Skills = () => {
           <div className='skillBar'>
         <img src={AppDesign} alt='AppDesign' className='skillBarImg' />
         <div className='skillBarText'>
-          <h2>Experiencia en Python y SQL</h2>
+          <h2>Experiencia en Java y SpringBoot</h2>
           <p> Además de mi pasión por el diseño y el desarrollo Front-End, también tengo experiencia en el mundo del back-end.Trabajo en la manipulación de datos y en la creación de sistemas eficientes que impulsan la funcionalidad de las aplicaciones.</p>
           </div>
         </div>

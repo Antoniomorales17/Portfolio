@@ -1,4 +1,31 @@
-/* Works.css */
+/* General button styles */
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filterButton {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filterButton:hover {
+  background-color: #ddd;
+}
+
+.filterButton.active {
+  background-color: #007BFF;
+  color: white;
+  border: 1px solid #0056b3;
+}
+
+/* Works container styles */
 .worksContainer {
   display: flex;
   flex-wrap: wrap;
@@ -6,99 +33,104 @@
   gap: 20px;
 }
 
-.worksTittle {
-  text-align: center;
-  font-size: 3rem; /* Tamaño de fuente más grande para pantallas pequeñas */
-}
-
+/* Project card styles */
 .project {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 100%; /* Ancho completo en pantallas pequeñas */
-  max-width: 500px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  flex-basis: calc(33.333% - 50px); /* 3 projects per row, adjust gap as necessary */
   margin: 10px;
 }
 
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-}
-
 .projectCard {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
-}
-
-.project h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #333;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-}
-
-.project .imgContainer {
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.projectCard h3 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.imgContainer {
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 .projectImg {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  margin-top: 3%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.projectCard:hover .projectImg {
+  transform: scale(1.1);
 }
 
 .project-description {
-  font-size: 1rem;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  color: #555;
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 15px;
 }
 
-.projectLinks {
-  display: flex;
-  justify-content: space-between;
+.techStack {
+  font-size: 2em;
+  color: #007BFF;
+  margin-bottom: 10px;
+  
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.github-link,
-.demo-link {
+.projectCard:hover .techStack {
+  opacity: 1;
+}
+
+.projectLinks a {
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
   text-decoration: none;
-  color: #007bff;
-  font-weight: bold;
-  transition: color 0.2s;
+  color: white;
+  background-color: #007BFF;
+  transition: background-color 0.3s ease;
 }
 
-.github-link:hover,
-.demo-link:hover {
-  color: #0056b3;
+.projectLinks a:hover {
+  background-color: #0056b3;
 }
 
-/* Media queries para pantallas más pequeñas */
+/* Title styles */
+.tittleProyects {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #faf6f6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .project {
+    flex-basis: calc(50% - 20px); /* 2 projects per row on smaller screens */
+  }
+}
+
 @media (max-width: 768px) {
   .project {
-    max-width: 100%; /* Ancho completo en pantallas pequeñas */
+    flex-basis: 100%; /* 1 project per row on very small screens */
   }
-
-  .worksTittle {
-    font-size: 1.5rem; /* Reducir el tamaño de fuente en pantallas pequeñas */
-  }
-
-  .project h3 {
-    font-size: 1.2rem; /* Reducir el tamaño de fuente en pantallas pequeñas */
-  }
-
-  .figma-link {
-    display: inline-block;
-    margin: 0 10px; /* Ajusta el margen según sea necesario */
-  }
-  
-  .figmaIcon {
-    width: 24px; /* Ajusta el tamaño según sea necesario */
-    height: 24px;
-    vertical-align: middle; /* Alinea el ícono verticalmente en el medio */
-  }
-  
-  
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Works.css';
 import tikets from '../../../img/wizzz.png';
 import retro2 from '../../../img/retro2.png';
@@ -7,6 +7,9 @@ import shop1 from '../../../img/shop1.png';
 import blog from '../../../img/blogw.png';
 import filo from '../../../img/filo.png'
 import bud from '../../../img/bud.png'
+import back1 from '../../../img/back1.png'
+import back2 from '../../../img/back2.png'
+import back3 from '../../../img/back3.png'
 import figma1 from '../../../img/figma1.png'
 import figma2 from '../../../img/figma2.png'
 import figma3 from '../../../img/figma3.png';
@@ -80,6 +83,33 @@ const proyectosData = [
 
 ];
 
+// Datos de los proyectos de Backend
+const proyectosBackend = [
+  {
+    title: 'JobCompany',
+    long_description: 'Aplicación Java diseñada para administrar la información de los empleados de una organización mediante el uso de Java Persistence API (JPA)',
+    img: back1,
+    link_github: 'https://github.com/Antoniomorales17/MoralesGimenez_pruebatec1',
+
+  },
+  {
+    title: 'tuCita',
+    long_description: 'Se trata de una aplicación que permite a los usuarios pedir y gestionar sus citas con la administración. Puedes seleccionar la modalidad, registrar la hora en el calendario y editar el estado entre "En espera" y "Atendido"',
+    img: back2,
+    link_github: 'https://github.com/Antoniomorales17/MoralesAntonio_pruebatec2',
+
+  },
+
+  {
+    title: 'Agencia & Sistema de reservas',
+    long_description: 'Simulación de aplicación de reservas de habitiaciones de hotel y vuelos.(Git, Java, Spring Boot, Testing, JPA + Hibernate, Spring Security y JWT) para desarrollar una API REST.',
+    img: back3,
+    link_github: 'https://github.com/Antoniomorales17/MoralesAntonio_pruebatec4',
+
+  },
+  // Agrega más proyectos de UX aquí
+];
+
 // Datos de los proyectos de UX
 const proyectosUXData = [
   {
@@ -100,11 +130,57 @@ const proyectosUXData = [
 ];
 
 const Works = () => {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+  };
+
+  const filteredProjects = (category) => {
+    switch (category) {
+      case 'Frontend':
+        return proyectosData;
+      case 'Backend':
+        return proyectosBackend;
+      case 'UX':
+        return proyectosUXData;
+      default:
+        return [...proyectosData, ...proyectosBackend, ...proyectosUXData];
+    }
+  };
+
   return (
     <section id="works">
-      <h2 className="worksTittle">Mis Proyectos</h2>
+      <h2 className='tittleProyects'>Proyectos</h2>
+      <div className="buttonContainer">
+        <button 
+          className={`filterButton ${selectedCategory === 'All' ? 'active' : ''}`} 
+          onClick={() => handleCategoryChange('All')}
+        >
+          Todos
+        </button>
+        <button 
+          className={`filterButton ${selectedCategory === 'Frontend' ? 'active' : ''}`} 
+          onClick={() => handleCategoryChange('Frontend')}
+        >
+          Frontend
+        </button>
+        <button 
+          className={`filterButton ${selectedCategory === 'Backend' ? 'active' : ''}`} 
+          onClick={() => handleCategoryChange('Backend')}
+        >
+          Backend
+        </button>
+        <button 
+          className={`filterButton ${selectedCategory === 'UX' ? 'active' : ''}`} 
+          onClick={() => handleCategoryChange('UX')}
+        >
+          UX
+        </button>
+      </div>
+
       <div className="worksContainer">
-        {proyectosData.map((proyecto, index) => (
+        {filteredProjects(selectedCategory).map((proyecto, index) => (
           <div className="project" key={index}>
             <div className="projectCard">
               <h3>{proyecto.title}</h3>
@@ -112,40 +188,30 @@ const Works = () => {
                 <img src={proyecto.img} alt={proyecto.title} className="projectImg" />
               </div>
               <p className="project-description">{proyecto.long_description}</p>
-
+              <div className="techStack">
+          {proyecto.technologies && proyecto.technologies.join(', ')}
+        </div>
               <div className="projectLinks">
-                <a href={proyecto.link_github} target="_blank" rel="noopener noreferrer" className="github-link">
-                  GitHub
-                </a>
-                <a href={proyecto.link_demo} target="_blank" rel="noopener noreferrer" className="demo-link">
-                  Demo
-                </a>
+                {proyecto.link_github && (
+                  <a href={proyecto.link_github} target="_blank" rel="noopener noreferrer" className="github-link">
+                    GitHub
+                  </a>
+                )}
+                {proyecto.link_demo && (
+                  <a href={proyecto.link_demo} target="_blank" rel="noopener noreferrer" className="demo-link">
+                    Demo
+                  </a>
+                )}
+                {proyecto.link_figma && (
+                  <a href={proyecto.link_figma} target="_blank" rel="noopener noreferrer" className="figma-link">
+                    Figma
+                  </a>
+                )}
               </div>
             </div>
           </div>
         ))}
       </div>
-
-      <h2 className="worksTittle">Proyectos de UX</h2>
-      <div className="worksContainer">
-        {proyectosUXData.map((proyecto, index) => (
-          <div className="project" key={index}>
-            <div className="projectCard">
-              <h3>{proyecto.title}</h3>
-              <div className="imgContainer">
-                <img src={proyecto.img} alt={proyecto.title} className="projectImg" />
-              </div>
-              <p className="project-description">{proyecto.long_description}</p>
-              <div className="projectLinks">
-                <a href={proyecto.link_figma} target="_blank" rel="noopener noreferrer" className="figma-link">
-                  Figma
-                </a>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
     </section>
   );
 };
