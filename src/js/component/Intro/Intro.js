@@ -23,7 +23,7 @@ const Intro = () => {
         impactantes e innovadoras. Estoy listo para enfrentar cualquier<br/>
         desafío y seguir sorprendiendo al mundo con mis logros.
       </p>
-      <a href="https://app.enhancv.com/share/2558ba10/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic" download="Mi_Curriculum.pdf">
+      <a href="https://drive.google.com/file/d/1zjN0jDb6eaRiJNdZfpI5aB4b1a6n-JDa/view" download="Mi_Curriculum.pdf">
   <button className='btn'><img src={btnImg} alt='btn' /> Ver mi currículum</button>
 </a>
       

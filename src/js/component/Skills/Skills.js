@@ -13,7 +13,7 @@ const Skills = () => {
   return (
     <section id='skills'>
       <span className='skillTittle'>¿Qué es lo que hago?</span>
-      <span className='skillDesc'>Soy un apasionado de la tecnología y me encuentro inmerso en el emocionante mundo del diseño web y la programación. Mi enfoque se centra en las tecnologías clave como HTML, CSS y JavaScript, que utilizo para dar vida a proyectos web creativos y funcionales. Además, me encanta trabajar con el framework React, que me permite construir aplicaciones web dinámicas y altamente interactivas</span>
+      <span className='skillDesc'>Soy un apasionado de la tecnología inmerso en el emocionante mundo del diseño web y la programación. Mi enfoque se centra en HTML, CSS y JavaScript, que utilizo para crear proyectos web creativos y funcionales. Además, trabajo con el framework React para construir aplicaciones web dinámicas e interactivas y con Java y Spring para desarrollar microservicios robustos</span>
       <div className='skillBars'>
       <div className='skillBar'>
         <img src={UiDesign} alt='UiDesign' className='skillBarImg' />

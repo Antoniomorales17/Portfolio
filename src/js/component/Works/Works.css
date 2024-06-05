@@ -35,7 +35,7 @@
 
 /* Project card styles */
 .project {
-  flex-basis: calc(33.333% - 50px); /* 3 projects per row, adjust gap as necessary */
+  flex-basis: calc(33.333% - 20px); /* 3 projects per row, adjust gap as necessary */
   margin: 10px;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .imgContainer {
-  height: 300px;
+  height: 250px;
   overflow: hidden;
   border-radius: 10px;
   margin-bottom: 15px;
