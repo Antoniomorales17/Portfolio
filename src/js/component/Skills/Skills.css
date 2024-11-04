@@ -8,6 +8,7 @@
     justify-content: center;
     text-align: center;
     margin: 0 auto;
+    
 }
 
 .skillTittle{
@@ -38,6 +39,7 @@
     padding: 1.5rem 2rem;
     border-radius: 0.5rem;
     background: rgb(50, 50,50);
+    border: 2px solid #f7d45b;
 }
 
 .skillBarImg{

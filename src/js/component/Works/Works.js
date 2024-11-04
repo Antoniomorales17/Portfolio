@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReact, faNodeJs, faJsSquare, faPython, faJava } from '@fortawesome/free-brands-svg-icons';
 import './Works.css';
 import tikets from '../../../img/wizzz.png';
 import retro2 from '../../../img/retro2.png';
@@ -13,22 +15,48 @@ import back3 from '../../../img/back3.png'
 import figma1 from '../../../img/figma1.png'
 import figma2 from '../../../img/figma2.png'
 import figma3 from '../../../img/figma3.png';
+import food from '../../../img/food.png';
 
 import find from '../../../img/find.png';
+
+const iconMap = {
+  React: faReact,
+  'Node.js': faNodeJs,
+  'JavaScript': faJsSquare,
+  Python: faPython,
+  Java: faJava,
+  Tailwind: 'tailwind-icon', // Asegúrate de tener un icono para Tailwind o usar un SVG personalizado
+  'Spring Boot': 'springboot-icon', // Igualmente, asegúrate de tener un icono para esto
+  Django: 'django-icon', // Asegúrate de tener el icono correspondiente
+  SQL: 'sql-icon', // Icono para SQL
+  MongoDB: 'mongodb-icon', // Icono para MongoDB
+  // Agrega más iconos según sea necesario
+};
 const proyectosData = [
   {
     title: 'Wizz Mail',
     long_description:
       'Aplicación encargada de gestionar y manipular los tickets de los clientes mediante la inteligencia artificial.¡Bienvenidos al futuro!',
     img: tikets,
+    technologies: ['React', 'JavaScript', "Python", "Flask" ,"Postgresql"],
     link_github: 'https://github.com/Antoniomorales17/WizzMail',
     link_demo: 'https://fronted-ticketing-app.vercel.app/',
+  },
+  {
+    title: 'AlmeriaFoodMap',
+    long_description:
+      'Es una aplicación web desarrollada para ofrecer a los usuarios una experiencia fácil y visual para encontrar y filtrar restaurantes en Almería',
+    img: food,
+    technologies: ["Python","Django", "MysqLite","Railway" ],
+    link_github: 'https://github.com/Antoniomorales17/AlmeriaFoodMap',
+    link_demo: 'https://almeriafoodmap.up.railway.app/restaurants/',
   },
   {
     title: 'Philosophy-App',
     long_description:
       'Bienvenido a la Aplicación de Filosofía, una aplicación de vanguardia diseñada para explorar el fascinante mundo de la filosofía',
     img: filo,
+    technologies: ["React", "Tailwind" ],
     link_github: 'https://github.com/Antoniomorales17/Philosophy-App',
     link_demo: 'https://juanmogimenez.vercel.app/',
   },
@@ -37,6 +65,7 @@ const proyectosData = [
     long_description:
       'Plataforma web diseñada para facilitar la búsqueda y el contacto directo con desarrolladores de todo el mundo',
     img: find,
+    technologies: ["React", "Tailwind" ],
     link_github: 'https://github.com/Antoniomorales17/finDeveloper',
     link_demo: 'https://findeveloper.vercel.app/',
   },
@@ -45,6 +74,7 @@ const proyectosData = [
     long_description:
       "¡Bienvenido a nuestra Tienda de Ropa en línea! E-commerce donde encontrarás una selección de moda para todas las edades y géneros",
     img: shop1,
+    technologies: ["React", "Tailwind" ],
     link_github: 'https://github.com/Antoniomorales17/NonoStore',
     link_demo: 'https://nonostore.vercel.app/',
   },
@@ -53,6 +83,7 @@ const proyectosData = [
     long_description:
       'Aplicación de cuestionario de videojuegos con un estilo retro, desarrollada en React. ¡Demuestra tus conocimientos sobre los videojuegos clásicos y diviértete!.',
     img: retro2,
+    technologies: ["React", "Tailwind"],
     link_github: 'https://github.com/Antoniomorales17/QuizGames',
     link_demo: 'https://quizvideogames.vercel.app/',
   },
@@ -61,6 +92,7 @@ const proyectosData = [
     long_description:
       'Esta es una aplicación web que te permite buscar y descargar GIFs y fotos de Giphy y Pixabay.¡Disfruta de la diversión de la búsqueda y la descarga de contenido visual!',
     img: gifs,
+    technologies: ["React", "Tailwind"],
     link_github: 'https://github.com/Antoniomorales17/Gif-Photo-Search-App',
     link_demo: 'https://gifphotosearch.vercel.app/',
   },
@@ -69,13 +101,14 @@ const proyectosData = [
     long_description:
       '¡Bienvenido a mi blog personal de programador junior! En este espacio, compartiré mis experiencias, conocimientos y aprendizajes mientras navego por el emocionante mundo de la programación.',
     img: blog,
+    technologies: ["Wordpress"],
     link_demo: 'https://antoniomoragimenez.wordpress.com/',
   },
   {
     title: 'Aplicación de Asignación de Presupuesto',
     long_description:
       'Aplicación web que ayuda a los usuarios a gestionar sus finanzas al permitirles establecer y hacer un seguimiento de su presupuesto.',
-    img: bud,
+    img: bud, technologies: ["React", "Tailwind" ],
     link_github: 'https://github.com/Antoniomorales17/Budget-allocation-app',
     link_demo: 'https://budget-allocation-app.vercel.app/',
   },
@@ -89,6 +122,7 @@ const proyectosBackend = [
     title: 'JobCompany',
     long_description: 'Aplicación Java diseñada para administrar la información de los empleados de una organización mediante el uso de Java Persistence API (JPA)',
     img: back1,
+    technologies: ["Java", "SQL"],
     link_github: 'https://github.com/Antoniomorales17/MoralesGimenez_pruebatec1',
 
   },
@@ -96,6 +130,7 @@ const proyectosBackend = [
     title: 'tuCita',
     long_description: 'Se trata de una aplicación que permite a los usuarios pedir y gestionar sus citas con la administración. Puedes seleccionar la modalidad, registrar la hora en el calendario y editar el estado entre "En espera" y "Atendido"',
     img: back2,
+    technologies: ["Java", "SpringBoot" , "SQL"],
     link_github: 'https://github.com/Antoniomorales17/MoralesAntonio_pruebatec2',
 
   },
@@ -104,6 +139,7 @@ const proyectosBackend = [
     title: 'Agencia & Sistema de reservas',
     long_description: 'Simulación de aplicación de reservas de habitiaciones de hotel y vuelos.(Git, Java, Spring Boot, Testing, JPA + Hibernate, Spring Security y JWT) para desarrollar una API REST.',
     img: back3,
+    technologies: ["Java", "SpringBoot" , "SQL"],
     link_github: 'https://github.com/Antoniomorales17/MoralesAntonio_pruebatec4',
 
   },
