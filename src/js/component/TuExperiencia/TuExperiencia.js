@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './TuExperiencia.css';
 
-import { Link } from 'react-scroll';
-
 const experienciaLaboral = [
   {
     puesto: 'E-commerce Manager',
@@ -62,7 +60,7 @@ const TuExperiencia = () => {
           }
         });
       },
-      { threshold: 0.1 } // Activar cuando el 10% del elemento esté visible
+      { threshold: 0.1 }
     );
 
     experienciaRefs.current.forEach((ref) => observer.observe(ref));
@@ -76,6 +74,8 @@ const TuExperiencia = () => {
 
   return (
     <section id="tu-experiencia">
+      <div className="linea-superior"></div> {/* Línea superior */}
+
       <h2 className="section-title">Experiencia</h2>
 
       <div className="experiencia-laboral">
@@ -109,6 +109,9 @@ const TuExperiencia = () => {
           </div>
         ))}
       </div>
+
+      <div className="linea-inferior"></div> {/* Línea inferior */}
+      
     </section>
   );
 };

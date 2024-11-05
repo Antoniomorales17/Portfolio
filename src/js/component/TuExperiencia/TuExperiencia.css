@@ -6,13 +6,43 @@
   position: relative;
 }
 
+/* Línea superior del árbol */
+.linea-superior {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 2rem; /* Ajusta esta altura según el espacio que necesites */
+  background-color: #ffc107; /* Amarillo */
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+/* Línea inferior del árbol */
+.linea-inferior {
+  content: '';
+  position: absolute;
+  top: calc(4rem + 2.5rem); /* Ajusta la altura de acuerdo al título */
+  left: 50%;
+  width: 4px;
+  height: calc(100% - 6rem); /* Ajusta para completar la línea */
+  background-color: #ffc107; /* Amarillo */
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+/* Título centralizado */
 .section-title {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: white
+  color: white;
+  z-index: 1;
+  position: relative; /* Asegura que los títulos estén por encima de las líneas */
 }
 
+/* Estilos de los elementos de experiencia y estudios */
 .experiencia-laboral, .historial-estudios {
   display: flex;
   flex-direction: column;
@@ -30,46 +60,30 @@
   opacity: 0;
   transition: transform 0.6s ease, opacity 0.6s ease;
   background-color: rgb(50, 50,50); /* Fondo amarillo claro */
-  color:white
+  color: white;
 }
 
-/* Títulos más destacados */
 .experiencia-item h4, .estudio-item h4 {
-  color: #ff9800; /* Naranja oscuro */
+  color: #ff9800;
   font-weight: bold;
 }
 
-
-
-/* Alterna elementos a la izquierda y derecha */
+/* Alternar alineación de elementos */
 .experiencia-item:nth-child(odd),
 .estudio-item:nth-child(odd) {
   align-self: flex-start;
   margin-left: 0;
-  transform: translateX(-20px); /* Posición inicial para animación */
+  transform: translateX(-20px);
 }
 
 .experiencia-item:nth-child(even),
 .estudio-item:nth-child(even) {
   align-self: flex-end;
   margin-right: 0;
-  transform: translateX(20px); /* Posición inicial para animación */
+  transform: translateX(20px);
 }
 
-/* Línea central del "árbol" sin cortar títulos */
-#tu-experiencia::before {
-  content: '';
-  position: absolute;
-  top: 4rem;
-  left: 50%;
-  width: 4px;
-  height: calc(100% - 4rem);
-  background-color: #ffc107; /* Amarillo */
-  transform: translateX(-50%);
-  z-index: -1;
-}
-
-/* Puntos amarillos en la línea */
+/* Puntos en la línea */
 .experiencia-item::before,
 .estudio-item::before {
   content: '';
@@ -78,33 +92,32 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #ffc107; /* Amarillo */
-  left: -1rem; /* Ajuste para la línea */
+  background-color: #ffc107;
+  left: -1rem;
 }
 
 .experiencia-item:nth-child(even)::before,
 .estudio-item:nth-child(even)::before {
-  left: calc(100% + 1rem); /* Ajuste en elementos de la derecha */
+  left: calc(100% + 1rem);
 }
 
-/* Clase visible para activar la animación */
+/* Clase visible */
 .visible {
   opacity: 1;
   transform: translateX(0);
 }
 
-
-/* Compatibilidad con pantallas pequeñas */
+/* Responsividad para dispositivos pequeños */
 @media screen and (max-width: 768px) {
   .experiencia-item, .estudio-item {
-      width: 100%;
-      align-self: center;
-      text-align: center;
-      margin: 1rem auto;
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    margin: 1rem auto;
   }
 
-  #tu-experiencia::before {
-      left: 0;
-      width: 2px;
+  .linea-superior, .linea-inferior {
+    left: 0; /* Alinear línea en móviles */
+    width: 2px; /* Línea más delgada en móviles */
   }
 }
