@@ -158,5 +158,15 @@
     flex-basis: 100%; /* 1 project per row en dispositivos pequeños */
     max-width: 100%;
   }
-  
+  .buttonContainer {
+    flex-direction: column; /* Cambiar a disposición en columna para móviles */
+    align-items: center; /* Centrar los botones */
+  }
+
+  .filterButton {
+    flex-basis: 100%; /* Hacer que los botones ocupen todo el ancho */
+    max-width: none; /* Permitir que los botones se expandan completamente */
+  }
 }
+  
+
